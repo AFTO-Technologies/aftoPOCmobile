@@ -32,14 +32,11 @@ const stories = [
   },
   {
     id: 6,
-    source: Images.asset6,
-    user: "user6",
+    source: Images.asset5,
+    user: "user5",
+    type: "video"
   },
-  {
-    id: 7,
-    source: Images.asset7,
-    user: "user7",
-  },
+
 ];
 
 

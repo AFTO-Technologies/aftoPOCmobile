@@ -7,6 +7,7 @@ const Images = {
     asset5:require('../assets/thumbnailImages/5.jpg'),
     asset6:require('../assets/thumbnailImages/6.jpg'),
     asset7:require('../assets/thumbnailImages/7.jpg'),
+    asset8: require('../assets/thumbnailImages/8.mp4'),
 }
 
 export default Images

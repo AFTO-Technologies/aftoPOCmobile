@@ -45,28 +45,41 @@ const onGestureEvent = useAnimatedGestureHandler({
 });
 
 const style = useAnimatedStyle(() =>{
+  const scale =interpolate(
+    translateY.value,
+    [0, height],
+    [1,0.2],
+    Extrapolate.CLAMP
+  )
   return{
     flex:1,
     transform: [
-      {translateX: translateX.value}, 
-      {translateY: translateY.value}
+      {translateX: translateX.value * scale}, 
+      {translateY: translateY.value * scale},
+      {scale}
     ]
 
   }
-})
+});
+console.log("Type===>", item)
   return (
     
     <PanGestureHandler onGestureEvent={onGestureEvent}>
     
     <Animated.View style={style} >
     <SharedElement key={item.id} >
-    <Image 
+      {
+        item.type == "video" ?
+        <Text>video</Text>:
+        <Image 
      source={item.source} 
      style={{
       width: "100%", 
       height:"100%"
     }} 
     />
+      }
+    
      </SharedElement>
     </Animated.View>
     
